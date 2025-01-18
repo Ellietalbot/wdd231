@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Park Name]</title>
+    <title>Yellowstone</title>
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
   </head>
@@ -11,7 +11,7 @@
     <p class="disclaimer">
       This is not a real NPS website. It is an educational exercise. If you
       landed here by accident, to find the real website visit
-      <a href="https://www.nps.gov/yell/index.htm">Yellowstone National Park</a>
+      <a href=""></a>
     </p>
     <div class="skip-links" aria-label="short-cut links" role="navigation">
       <ul>
@@ -66,10 +66,10 @@
         <div class="hero-banner">
           <img id= "hero-img" src="images/yellowstone.jpg">
           <div class="hero-banner__content">
-            <a href="#" class="hero-banner__title">Yellowstone</a>
+            <a href="#" class="hero-banner__title"></a>
             <p class="hero-banner__subtitle">
-              <span>National Park</span>
-              <span>ID, MT, WY</span>
+              <span id="designation"></span>
+              <span id="locations" ></span>
             </p>
           </div>
         </div>
@@ -119,7 +119,10 @@
         </nav>
       </section>
     </header>
-    <main id="main"></main>
+    <main id="main">
+      <section class="intro"></section>
+      <section class="info"></section>
+    </main>
     <footer id="park-footer"></footer>
   </body>
 </html>

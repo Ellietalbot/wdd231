@@ -183,3 +183,51 @@ a:visited {
   width: 24px;
   height: 24px;
 }
+
+.intro{
+  margin: 4em;
+}
+.intro{
+  font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.info{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.info img{
+  width: 400px;
+  height: 200 px;
+}
+.media-card h3{
+color: var(--bs-black);
+}
+
+.info p{
+  width: 400px;
+  color: var(--bs-secondary);
+}
+.media-card{
+  margin: 20px;
+}
+footer{
+  background-image: url('../images/topo_pattern.png');
+  padding: 0px;
+  margin: 0 auto;
+}
+.contact{
+  margin:50px;
+  padding: 50px;
+}
+.contact h3{
+
+  text-transform: uppercase;
+}
+.contact h4{
+
+  font-weight: bold;
+}
+.contact p{
+  color:var(--bs-grey-2)
+
+}
