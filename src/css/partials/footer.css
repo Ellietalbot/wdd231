@@ -1,0 +1,21 @@
+footer{
+  background-image: url('../images/topo_pattern.png');
+  padding: 0px;
+  margin: 0 auto;
+}
+.contact{
+  margin:50px;
+  padding: 50px;
+}
+.contact h3{
+
+  text-transform: uppercase;
+}
+.contact h4{
+
+  font-weight: bold;
+}
+.contact p{
+  color:var(--bs-grey-2)
+
+}

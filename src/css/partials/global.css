@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  font-size: 18px;
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: var(--bs-white);
+}

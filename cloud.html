@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Cloud Generator</title>
+</head>
+<body>
+    <button id="generateWordCloud">Generate Word Cloud</button>
+    <script>
+        document.getElementById('generateWordCloud').addEventListener('click', async () => {
+            try {
+                // Fetch the article content
+                const articleResponse = await fetch('https://apnews.com/article/trump-inauguration-biden-democracy-power-00d5651a0ac611c2c6e3b555c4a8ad11');
+                const articleData = await articleResponse.json();
+                const article = articleData.data.content;
+
+                // Send a POST request to the word cloud API
+                const wordCloudResponse = await fetch('https://quickchart.io/wordcloud', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        format: 'png',
+                        width: 1000,
+                        height: 1000,
+                        fontScale: 15,
+                        scale: 'linear',
+                        removeStopwords: true,
+                        minWordLength: 4,
+                        text: article,
+                    })
+                });
+
+                const wordCloudBlob = await wordCloudResponse.blob();
+
+                // Create a download link for the word cloud image
+                const url = URL.createObjectURL(wordCloudBlob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'newscloud.png';
+                link.click();
+
+                console.log('Word cloud image saved as newscloud.png');
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
